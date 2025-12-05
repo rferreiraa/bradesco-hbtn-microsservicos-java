@@ -14,7 +14,7 @@ public class UserController {
     public String findUserById(@PathVariable int id) {
 
         if (id > 0 && id < 100) {
-            return "You have entered valid ID";
+            return "You have entered valid ";
         } else {
             throw new UserIdException("ID " + id);
         }
@@ -24,7 +24,7 @@ public class UserController {
     public String findUserByName(@PathVariable String userName) {
 
         if (userName.length() > 3 && userName.length() < 15) {
-            return "You have entered valid USERNAME";
+            return "You have entered valid ";
         } else {
             throw new UserNameException("USERNAME " + userName);
         }
@@ -34,7 +34,7 @@ public class UserController {
     public String findUserByCPF(@PathVariable String cpf) {
 
         if (isCPF(cpf)) {
-            return "You have entered valid CPF";
+            return "You have entered valid ";
         } else {
             throw new CPFException("CPF " + cpf);
         }
